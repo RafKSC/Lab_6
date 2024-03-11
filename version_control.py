@@ -1,13 +1,13 @@
 # Rafael Hinchey
 
 def encode(password):
-    new_password = ""
-    data = password[:]
-    for i in data:
-        j = int(i)
-        k = (j + 3) % 10
-        x = str(k)
-        new_password += x
+    new_password = "" 		# return result will be a str variable
+    data = password[:] 		# creates an array variable
+    for i in data:		    # for loop for each character from the str
+        j = int(i)		    # turns str into int
+        k = (j + 3) % 10    # encode formula
+        x = str(k)		    # turns new int back into str variable
+        new_password += x   # combining characters into one string
     return new_password
 
 
