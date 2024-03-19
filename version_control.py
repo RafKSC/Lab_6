@@ -8,8 +8,16 @@ def encode(password):
         k = (j + 3) % 10    # encode formula
         x = str(k)		    # turns new int back into str variable
         new_password += x   # combining characters into one string
+
     return new_password
 
+# Alexander Rufrano
+
+def decode(password):
+    temp_password = ""                      # Create empty string to return
+    for i in password:                      # Create for loop to iterate through the encoded password string
+        temp_password += str(int(i) - 3)    # Reduce each string number by 3
+    return temp_password                    # Return the decoded password string
 
 def main():
     encrypt = True
@@ -28,9 +36,10 @@ def main():
             print("Your password has been encoded and stored!")
 
         if option == 2:
-            pass
-            # code below is option 2 but, we're supposed to create a decode function?
-            # print(f"Your encoded password is {encode(password)}, and the original password is {password}.")
+            # Alexander Rufrano
+            encoded_password = encode(password) # create a variable that comprises the encoded password string
+            decoded_password = decode(encoded_password) # create a varaible that decodes the encoded password
+            print(f"Your encoded password is {encoded_password}, and the original password is {decoded_password}.")  # Create print function to display result.
 
         if option == 3:
             encrypt = False
