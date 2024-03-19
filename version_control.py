@@ -15,8 +15,9 @@ def encode(password):
 
 def decode(password):
     temp_password = ""                      # Create empty string to return
+    decode_list = [7, 8, 9, 0, 1, 2, 3, 4, 5, 6]
     for i in password:                      # Create for loop to iterate through the encoded password string
-        temp_password += str(int(i) - 3)    # Reduce each string number by 3
+        temp_password += str(decode_list[int(i)])    # use i as index to decoded number
     return temp_password                    # Return the decoded password string
 
 def main():
