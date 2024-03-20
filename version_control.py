@@ -1,5 +1,7 @@
 # Rafael Hinchey
 
+# Pulled code from GitHub and code works correctly
+
 def encode(password):
     new_password = "" 		# return result will be a str variable
     data = password[:] 		# creates an array variable
